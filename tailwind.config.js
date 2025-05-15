@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
     "./src/app/**/*.{js,jsx,ts,tsx}",
@@ -6,15 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-        colors: {
+      colors: {
         space:     "#0F172A",
         star:      "#F8FAFC",
         accent:    "#7DD3FC",      // Galactic Blue
         secondary: "#E2E8F0",      // Starlight Silver
         highlight: "#C084FC",      // Nebula Purple
-        },
+      },
       backgroundImage: {
         'star-gradient': 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)',
+        'base-gradient': 'linear-gradient(to bottom, #0F172A, #1E293B)',
       },
       animation: {
         spinSlow:    "spin 20s linear infinite",

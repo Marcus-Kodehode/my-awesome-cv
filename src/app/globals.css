@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Her kan du legge dine egne overrides, men ikke bakgrunns-CSS som overstyrer tailwind. */
+body {
+  @apply bg-base-gradient text-star;
+}
