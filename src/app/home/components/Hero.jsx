@@ -26,11 +26,10 @@ export default function Hero() {
             Welcome{userName ? `, ${userName}` : ''}!
           </h1>
           <p className="text-lg leading-relaxed md:text-xl text-secondary drop-shadow">
-            I'm Marcus, a frontend developer passionate about creating smooth,
-            elegant, and user-focused digital experiences. I build interfaces
-            that don’t just look great — they feel right. With a strong eye for
-            design and performance, I aim to create fast, responsive, and
-            delightful web applications that users love.
+            I'm Marcus — a creative problem solver with a passion for crafting intuitive, high-quality digital experiences.
+            Whether it's designing seamless interfaces, optimizing performance, or improving user journeys, I care deeply about building things that are not only beautiful but meaningful.
+            With a sharp eye for detail and a user-first mindset, I bring together design and functionality to create products that feel as good as they look.
+
           </p>
         </div>
 
