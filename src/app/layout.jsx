@@ -6,7 +6,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-space text-star">
-        {children}
+        {/* <main className='px-8 md:px-16 lg:px-24'> */}
+          {children}
+          {/* </main> */}
+        
       </body>
     </html>
   );

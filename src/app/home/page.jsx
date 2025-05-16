@@ -1,12 +1,18 @@
-import Hero from './components/Hero';
+"use client";
+import Hero from "./components/Hero";
+import About from "@/app/about/components/About";
+// …
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <>
-      <Hero />
-      {/* Add About, Skills, etc. here as you build */}
-    </>
+    <main>
+      <section id="hero" className="scroll-mt-20">
+        <Hero />
+      </section>
+      <section id="about" className="scroll-mt-20">
+        <About />
+      </section>
+      {/* … */}
+    </main>
   );
 }
-
-

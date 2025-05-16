@@ -26,22 +26,22 @@ export default function Hero() {
             Welcome{userName ? `, ${userName}` : ''}!
           </h1>
           <p className="text-lg leading-relaxed md:text-xl text-secondary drop-shadow">
-            I'm Marcus — a creative problem solver with a passion for crafting intuitive, high-quality digital experiences.
-            Whether it's designing seamless interfaces, optimizing performance, or improving user journeys, I care deeply about building things that are not only beautiful but meaningful.
-            With a sharp eye for detail and a user-first mindset, I bring together design and functionality to create products that feel as good as they look.
+            Hi, I’m Marcus — I’m an analytical Frontend developer who thrives on solving complex challenges and building intuitive, high-performance web experiences.  
+            With a strategic mindset and unwavering attention to detail, I leverage Next.js, React and Tailwind CSS to craft responsive interfaces, optimize performance, and streamline user journeys.  
+            From architecture and code-splitting to accessibility and A/B testing, I blend creativity and logic to deliver products that feel as polished under the hood as they do on the screen.
 
           </p>
         </div>
 
         {/* Bilde høyre */}
         <div className="flex justify-center mt-12 md:mt-0 md:w-1/2">
-          <div className="rounded-[25%] p-[3px] bg-gradient-to-br from-highlight to-accent shadow-xl">
+          <div className="rounded-[25px] p-[3px] bg-gradient-to-br from-highlight to-accent shadow-xl">
             <Image
               src="/me.jpg"
               alt="Marcus Børresen"
               width={320}
               height={400}
-              className="object-cover rounded-[25%] w-[240px] h-[320px] bg-space drop-shadow-xl"
+              className="object-cover rounded-[25px] w-[240px] h-[320px] bg-space drop-shadow-xl"
             />
           </div>
         </div>
