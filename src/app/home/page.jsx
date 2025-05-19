@@ -1,19 +1,17 @@
-// src/app/home/page.jsx
 'use client';
 
 import ScrollSpy from '@/components/base/ScrollSpy';
 import Hero from './components/Hero';
 import About from '@/app/about/components/About';
-
-// ** HER ER DET DU MANGLET: **
-import SkillsPage from '@/app/skills/page'; // eller '@/app/skills/SkillsPage'
-import ExperienceSection from './components/ExperienceSection'
-import ContactPage from '@/app/contact/page';
+import SkillsSection from '@/app/skills/components/SkillsSection';
+import ExperienceSection from '@/app/experience/components/ExperienceSection';
+import ContactSection from '@/app/contact/components/ContactSection';
 
 export default function HomePage() {
   return (
     <>
-      <ScrollSpy sections={['hero','about','skills','experience','contact']} />
+      {/* ScrollSpy holder styr på hvilken seksjon som er i viewport */}
+      <ScrollSpy sections={['hero', 'about', 'skills', 'experience', 'contact']} />
 
       <main>
         <section id="hero" className="scroll-mt-[var(--header-height)]">
@@ -25,15 +23,15 @@ export default function HomePage() {
         </section>
 
         <section id="skills" className="scroll-mt-[var(--header-height)]">
-          <SkillsPage />
+          <SkillsSection />
         </section>
 
         <section id="experience" className="scroll-mt-[var(--header-height)]">
-          <ExperiencePage />
+          <ExperienceSection />
         </section>
 
         <section id="contact" className="scroll-mt-[var(--header-height)]">
-          <ContactPage />
+          <ContactSection />
         </section>
       </main>
     </>
