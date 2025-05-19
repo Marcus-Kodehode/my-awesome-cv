@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="flex justify-center mt-12 md:mt-0 md:w-1/2">
           <div className="rounded-[25px] p-[3px] bg-gradient-to-br from-highlight to-accent shadow-xl">
             <Image
-              src="/me.jpg"
+              src="/images/me.jpg"
               alt="Marcus Børresen"
               width={320}
               height={400}
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <ScrollDownCTA targetId="about" />
+      <ScrollDownCTA />
     </section>
   );
 }

@@ -1,38 +1,79 @@
+// src/app/about/components/AboutCarousel.jsx
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import InfoCard from "./InfoCard";
 import { CARDS_DATA } from "@/data/cardsdata";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function AboutCarousel() {
-  const swiperRef = useRef(null);
+  // callback refs so Swiper sees them at mount time
+  const [prevEl, setPrevEl] = useState(null);
+  const [nextEl, setNextEl] = useState(null);
+  const [paginationEl, setPaginationEl] = useState(null);
 
   return (
     <div className="relative w-full max-w-5xl py-8 mx-auto">
+      {/* ← Prev button (outline style) */}
       <button
-        onClick={() => swiperRef.current?.slidePrev()}
-        className="absolute left-0 z-10 flex items-center justify-center w-10 h-10 transition -translate-y-1/2 bg-opacity-50 rounded-full top-1/2 bg-space-light text-star hover:bg-opacity-80"
+        ref={setPrevEl}
+        className={[
+          "absolute left-[-2.5rem] top-1/2 transform -translate-y-1/2",
+          "rounded-full p-1.5 text-star z-20",
+          "bg-space-light/30 hover:bg-space-light/50",
+          "border border-star/20 hover:border-star",
+          "transition-all duration-200 ease",
+          "hover:shadow-lg",
+        ].join(" ")}
       >
-        ‹
+        <ChevronLeft size={20} />
       </button>
+
+      {/* Next → */}
       <button
-        onClick={() => swiperRef.current?.slideNext()}
-        className="absolute right-0 z-10 flex items-center justify-center w-10 h-10 transition -translate-y-1/2 bg-opacity-50 rounded-full top-1/2 bg-space-light text-star hover:bg-opacity-80"
+        ref={setNextEl}
+        className={[
+          "absolute right-[-2.5rem] top-1/2 transform -translate-y-1/2",
+          "rounded-full p-1.5 text-star z-20",
+          "bg-space-light/30 hover:bg-space-light/50",
+          "border border-star/20 hover:border-star",
+          "transition-all duration-200 ease",
+          "hover:shadow-lg",
+        ].join(" ")}
       >
-        ›
+        <ChevronRight size={20} />
       </button>
 
       <Swiper
-        modules={[Pagination, Autoplay]}
-        onSwiper={(s) => (swiperRef.current = s)}
+        modules={[Pagination, Autoplay, Navigation]}
         loop
         speed={600}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
+        navigation={{ prevEl, nextEl }}
+        pagination={{
+          el: paginationEl,
+          clickable: true,
+          bulletClass: [
+            "swiper-pagination-bullet",
+            "w-1.5 h-1.5",               /* 6px */
+            "rounded-full",
+            "bg-highlight/50",            /* baked-in 50% */
+            "transition-transform duration-200 ease",
+            "hover:scale-125",
+          ].join(" "),
+          bulletActiveClass: [
+            "swiper-pagination-bullet-active",
+            "w-2 h-2",                    /* 8px */
+            "bg-gradient-to-r from-highlight to-accent",
+            "opacity-100",
+            "shadow-md",
+          ].join(" "),
+        }}
         slidesPerView={3}
         spaceBetween={24}
         breakpoints={{
@@ -47,6 +88,12 @@ export default function AboutCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* pagination container */}
+      <div
+        ref={setPaginationEl}
+        className="mx-auto mt-6 flex justify-center space-x-2 max-w-[6rem]"
+      />
     </div>
   );
 }

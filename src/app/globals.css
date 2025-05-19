@@ -10,3 +10,12 @@ html {
 body {
   @apply bg-base-gradient text-star;
 }
+
+
+.swiper-pagination-bullet {
+  @apply w-2 h-2 rounded-full opacity-50 bg-highlight;
+}
+
+.swiper-pagination-bullet-active {
+  @apply opacity-100 bg-accent;
+}

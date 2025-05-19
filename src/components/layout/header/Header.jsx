@@ -1,5 +1,6 @@
-"use client";
+'use client';
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import StarsBackground from "./StarsBackground";
@@ -12,21 +13,16 @@ export default function Header() {
   const pathname = usePathname();
   const isStartScreen = pathname === "/startscreen";
 
-  // New: hide-on-scroll-down
+  // Skjul header ved scroll ned
   const [hidden, setHidden] = useState(false);
   const [lastY, setLastY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      if (currentY > lastY && currentY > 100) {
-        setHidden(true);
-      } else {
-        setHidden(false);
-      }
+      setHidden(currentY > lastY && currentY > 100);
       setLastY(currentY);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastY]);
@@ -37,8 +33,8 @@ export default function Header() {
         fixed top-0 left-0 z-50 w-full h-32 md:h-28
         transition-transform duration-300
         ${hidden ? "-translate-y-full" : "translate-y-0"}
-        ${isStartScreen 
-          ? "pointer-events-none" 
+        ${isStartScreen
+          ? "pointer-events-none"
           : "pointer-events-auto opacity-100"}
       `}
     >
@@ -46,9 +42,11 @@ export default function Header() {
         <StarsBackground />
 
         <div className="relative z-10 flex flex-col h-full gap-4 px-6 pt-4 md:flex-row md:items-center md:justify-between">
-          {/* Logo + tittel */}
+          {/* Kun logo er klikkbar */}
           <div className="flex items-center gap-4">
-            <Logo />
+            <Link href="/home#hero" aria-label="Gå til toppen">
+              <Logo />
+            </Link>
             <LogoAndTitle />
           </div>
 
