@@ -19,3 +19,16 @@ body {
 .swiper-pagination-bullet-active {
   @apply opacity-100 bg-accent;
 }
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrollLoop {
+  animation: scrollLoop 30s linear infinite;
+}

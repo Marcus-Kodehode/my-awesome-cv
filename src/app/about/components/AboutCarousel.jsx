@@ -12,14 +12,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function AboutCarousel() {
-  // callback refs so Swiper sees them at mount time
+  // callback-refs slik at Swiper finner dem ved init
   const [prevEl, setPrevEl] = useState(null);
   const [nextEl, setNextEl] = useState(null);
   const [paginationEl, setPaginationEl] = useState(null);
 
   return (
     <div className="relative w-full max-w-5xl py-8 mx-auto">
-      {/* ← Prev button (outline style) */}
+      {/* ← Prev-knapp */}
       <button
         ref={setPrevEl}
         className={[
@@ -27,9 +27,9 @@ export default function AboutCarousel() {
           "rounded-full p-1.5 text-star z-20",
           "bg-space-light/30 hover:bg-space-light/50",
           "border border-star/20 hover:border-star",
-          "transition-all duration-200 ease",
-          "hover:shadow-lg",
+          "transition-all duration-200 ease hover:shadow-lg",
         ].join(" ")}
+        aria-label="Forrige"
       >
         <ChevronLeft size={20} />
       </button>
@@ -42,9 +42,9 @@ export default function AboutCarousel() {
           "rounded-full p-1.5 text-star z-20",
           "bg-space-light/30 hover:bg-space-light/50",
           "border border-star/20 hover:border-star",
-          "transition-all duration-200 ease",
-          "hover:shadow-lg",
+          "transition-all duration-200 ease hover:shadow-lg",
         ].join(" ")}
+        aria-label="Neste"
       >
         <ChevronRight size={20} />
       </button>
@@ -62,13 +62,13 @@ export default function AboutCarousel() {
             "swiper-pagination-bullet",
             "w-1.5 h-1.5",               /* 6px */
             "rounded-full",
-            "bg-highlight/50",            /* baked-in 50% */
+            "bg-highlight/50",           /* 50% opacity */
             "transition-transform duration-200 ease",
             "hover:scale-125",
           ].join(" "),
           bulletActiveClass: [
             "swiper-pagination-bullet-active",
-            "w-2 h-2",                    /* 8px */
+            "w-2 h-2",                   /* 8px */
             "bg-gradient-to-r from-highlight to-accent",
             "opacity-100",
             "shadow-md",
@@ -83,17 +83,20 @@ export default function AboutCarousel() {
         }}
       >
         {CARDS_DATA.map((card, idx) => (
-          <SwiperSlide key={idx}>
+          <SwiperSlide
+            key={idx}
+            className="flex items-stretch justify-center" /* sørger for lik høyde */
+          >
             <InfoCard {...card} />
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* pagination container */}
+      {/* Paginering under */}
       <div
         ref={setPaginationEl}
         className="mx-auto mt-6 flex justify-center space-x-2 max-w-[6rem]"
       />
     </div>
-  );
+);
 }
