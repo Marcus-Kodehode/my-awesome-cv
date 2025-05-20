@@ -8,19 +8,19 @@ export const EXPERIENCE = [
     to:   "Feb 2014",
   },
   {
-    role: "Cafe Assistant / Barista",
+    role: "Cafe Assistant / Marketing /Barista",
     company: "La Baguette, Drammen",
     from: "Aug 2014",
     to:   "Apr 2017",
   },
   {
-    role: "Waiter / Bartender",
+    role: "Waiter / Bartender / Bar Manager",
     company: "Unique Cafe, Drammen",
     from: "Sep 2016",
     to:   "Aug 2017",
   },
   {
-    role: "Cafe Assistant / Marketing",
+    role: "Cafe Assistant / Marketing / Barista",
     company: "La Baguette, Drammen",
     from: "Oct 2018",
     to:   "Mar 2019",
