@@ -1,6 +1,7 @@
+// src/app/about/components/About.jsx
 "use client";
+
 import AboutStars from "./AboutStars";
-import IntroText from "./IntroText"; // du kan også fjerne hvis du ønsker alt custom
 import AboutCarousel from "./AboutCarousel";
 
 export default function About() {
@@ -17,34 +18,33 @@ export default function About() {
       {/* Innhold */}
       <div className="container relative mx-auto space-y-16">
         {/* 2×2 grid med tekst */}
-        <div className="grid grid-cols-1 gap-12 text-white lg:grid-cols-2">
+        <div className="grid items-start grid-cols-1 gap-12 text-white lg:grid-cols-2">
           {/* Venstre kolonne: Om meg */}
           <div className="space-y-6">
             <h2 className="text-4xl font-bold">About Me</h2>
             <p className="text-lg leading-relaxed">
-              I’m a frontend developer with a passion for crafting clean, accessible interfaces and delightful user experiences. My journey started with vanilla JavaScript, and today I build scalable applications with Next.js and Tailwind CSS.
+              I’m a junior frontend developer with a solid foundation in HTML, CSS and JavaScript, and hands-on experience building small React and Next.js projects. I focus on crafting clean, accessible interfaces and optimizing performance to deliver smooth, responsive user experiences.
             </p>
             <p className="text-lg leading-relaxed">
-              I love leading and motivating others, and I’m skilled at selling ideas and solutions. I value responsibility, high work capacity, success and recognition, and see myself as energetic, ambitious, and social.
+              Through coursework and personal side-projects, I have created interactive UIs and mastered best practices for maintainable code, basic testing and user-centric design—always eager to learn more and level up my skills.
             </p>
           </div>
 
-          {/* Høyre kolonne: Ferdigheter */}
+          {/* Høyre kolonne: Personlig profil */}
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold">My Skills</h2>
+            <h2 className="text-4xl font-bold">Personal Profile</h2>
             <p className="text-lg leading-relaxed">
-              Strong organizational and procedural skills: I excel at creating step-by-step systems, ensuring that tasks are completed efficiently and resources are used optimally.
+              Highly organized and methodical: I break down complex challenges into clear, step-by-step processes, ensuring timely delivery and optimal resource use. My background in customer service has sharpened my attention to detail and my ability to adapt on the fly.
             </p>
             <p className="text-lg leading-relaxed">
-              Highly dependable and decisive: I value structure, predictability and clear goals. My motivators include challenge, influence and setting ambitious targets.
+              Proactive learner & team player: I thrive on sharing knowledge, mentoring peers and collaborating across functions. Curiosity and creativity drive me to experiment with new tools and set ambitious personal goals.
             </p>
           </div>
         </div>
 
-        {/* Karusell med egenskaps‐kort */}
+        {/* Karusell med egenskaps-kort */}
         <AboutCarousel />
       </div>
     </section>
   );
 }
-

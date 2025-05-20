@@ -26,9 +26,10 @@ export default function Hero() {
             Welcome{userName ? `, ${userName}` : ''}!
           </h1>
           <p className="text-lg leading-relaxed md:text-xl text-secondary drop-shadow">
-            Hi, I’m Marcus — I’m an analytical Frontend developer who thrives on solving complex challenges and building intuitive, high-performance web experiences.  
-            With a strategic mindset and unwavering attention to detail, I leverage Next.js, React and Tailwind CSS to craft responsive interfaces, optimize performance, and streamline user journeys.  
-            From architecture and code-splitting to accessibility and A/B testing, I blend creativity and logic to deliver products that feel as polished under the hood as they do on the screen.
+            Hi, I’m Marcus — a detail-oriented frontend developer with a strong foundation in React, HTML, CSS, JavaScript and Vite.  
+            I enjoy building responsive, accessible user interfaces with clean structure and a focus on performance.  
+            With a background in customer service and team environments, I bring clear communication, problem-solving and a steady mindset to every project.  
+            I’m currently expanding my skills with Next.js and Tailwind CSS to stay current and grow as a developer.
 
           </p>
         </div>
