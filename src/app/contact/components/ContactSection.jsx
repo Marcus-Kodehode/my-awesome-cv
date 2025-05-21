@@ -9,8 +9,8 @@ export default function ContactSection() {
       {/* Bakgrunn */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Sømløs stjernehimmel → soloppgang */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1E293B] via-[#334155] via-65% to-[#fbbf24]" />
-        <ContactStars />
+        <div className="absolute inset-0" />
+        {/* <ContactStars /> */}
       </div>
 
       {/* Innhold */}

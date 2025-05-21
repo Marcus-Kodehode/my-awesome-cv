@@ -39,7 +39,7 @@ export default function Header() {
       `}
     >
       <div className="relative h-full max-w-6xl mx-auto overflow-hidden shadow-md pointer-events-auto rounded-b-2xl bg-star-gradient backdrop-blur-md">
-        <StarsBackground />
+        {/* <StarsBackground /> */}
 
         <div className="relative z-10 flex flex-col h-full gap-4 px-6 pt-4 md:flex-row md:items-center md:justify-between">
           {/* Kun logo er klikkbar */}

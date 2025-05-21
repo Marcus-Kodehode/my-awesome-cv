@@ -8,14 +8,14 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative scroll-mt-[var(--header-height)] px-4 py-20"
+      className="bg-slate-500/30 relative scroll-mt-[var(--header-height)] px-4 py-20"
     >
       {/* Gradient + stjernehimmel-bakgrunn */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Gradient som blir lysere nedover */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#334155] via-[#1E293B] to-[#0F172A]" />
+        <div className="absolute inset-0" />
         {/* Partikler over gradienten */}
-        <ExperienceStars />
+        {/* <ExperienceStars /> */}
       </div>
 
       {/* Innhold */}

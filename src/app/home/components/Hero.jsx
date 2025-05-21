@@ -15,9 +15,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen pt-32 bg-gradient-to-b from-space to-[#0C1A32] flex items-center"
+      className="relative flex items-center w-full min-h-screen pt-32"
     >
-      <HomeStars />
+      {/* <HomeStars /> */}
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-6xl px-6 mx-auto text-star md:flex-row md:items-center md:justify-between">
         {/* Tekstvenstre */}

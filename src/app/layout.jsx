@@ -3,6 +3,7 @@ import Footer from '@/components/layout/footer/Footer';
 import './globals.css';
 
 export default function RootLayout({ children }) {
+  //! Lag logikk så header og footer IKKE vises når url er startscreen
   return (
     <html lang="en">
       <body className="bg-space text-star">
