@@ -2,26 +2,35 @@
 import React from "react";
 import ExperienceTimeline from "./ExperienceTimeline";
 import ProjectGrid from "./ProjectGrid";
+import ExperienceStars from "./ExperienceStars";
 
 export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="container mx-auto px-4 py-20 scroll-mt-[var(--header-height)] bg-about-gradient"
+      className="relative scroll-mt-[var(--header-height)] px-4 py-20"
     >
-      <h2 className="mb-12 text-4xl font-bold text-star">Experience & Projects</h2>
+      {/* Gradient + stjernehimmel-bakgrunn */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Gradient som blir lysere nedover */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#334155] via-[#1E293B] to-[#0F172A]" />
+        {/* Partikler over gradienten */}
+        <ExperienceStars />
+      </div>
 
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-        {/* VENSTRE: Work History */}
-        <div>
-          <h3 className="mb-6 text-2xl font-semibold text-star">Work History</h3>
-          <ExperienceTimeline />
-        </div>
+      {/* Innhold */}
+      <div className="container relative z-10 mx-auto space-y-16">
+        <h2 className="mb-12 text-4xl font-bold text-star">Experience & Projects</h2>
 
-        {/* HØYRE: Selected Projects */}
-        <div>
-          <h3 className="mb-6 text-2xl font-semibold text-star">Selected Projects</h3>
-          <ProjectGrid />
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div>
+            <h3 className="mb-6 text-2xl font-semibold text-star">Work History</h3>
+            <ExperienceTimeline />
+          </div>
+          <div>
+            <h3 className="mb-6 text-2xl font-semibold text-star">Selected Projects</h3>
+            <ProjectGrid />
+          </div>
         </div>
       </div>
     </section>

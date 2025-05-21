@@ -1,4 +1,4 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/app/**/*.{js,jsx,ts,tsx}",
@@ -7,7 +7,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // core
         space: "#0F172A",
         "space-light": "#1E293B",
         star: "#F8FAFC",
@@ -19,11 +18,16 @@ module.exports = {
         "base-gradient": "linear-gradient(180deg, #0F172A 0%, #1E293B 100%)",
         "star-gradient": "linear-gradient(180deg, #0F172A 0%, #1E293B 100%)",
         "about-gradient": "linear-gradient(180deg, #1E293B 0%, #374151 100%)",
+        // Nå med glidende, lysere toppfarge for sømløs overgang fra skills
+        "experience-gradient": "linear-gradient(180deg, #1E293B 0%, #334155 30%, #475569 100%)",
+        'contact-gradient': 'linear-gradient(180deg, #1E293B 0%, #334155 65%, #fbbf24 100%)',
       },
+
+
       animation: {
         spinSlow: "spin 20s linear infinite",
         spinReverse: "spinReverse 30s linear infinite",
-        marquee: "marquee 20s linear infinite", // ✅ korrekt animasjon for sømløs loop
+        marquee: "marquee 20s linear infinite",
       },
     },
   },

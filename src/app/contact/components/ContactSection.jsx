@@ -1,15 +1,23 @@
-'use client';
+"use client";
+import React from "react";
+import ContactForm from "./ContactForm";
+import ContactStars from "./ContactStars";
 
 export default function ContactSection() {
   return (
-    <section className="container px-4 py-12 mx-auto lg:py-24">
-      <h2 className="mb-6 text-3xl font-bold">Contact Me</h2>
-      {/* Kontaktinformasjon / skjema */}
-      <p className="mb-4">Feel free to drop me a line at <a href="mailto:marcus@example.com" className="text-accent">marcus@example.com</a></p>
-      <ul className="space-y-2">
-        <li>LinkedIn: <a href="#" className="text-accent">/in/marcus</a></li>
-        <li>GitHub: <a href="#" className="text-accent">github.com/marcus</a></li>
-      </ul>
+    <section id="contact" className="relative px-4 py-24">
+      {/* Bakgrunn */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Sømløs stjernehimmel → soloppgang */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E293B] via-[#334155] via-65% to-[#fbbf24]" />
+        <ContactStars />
+      </div>
+
+      {/* Innhold */}
+      <div className="container relative z-10 max-w-3xl mx-auto space-y-12">
+        <h2 className="text-4xl font-bold text-center text-star">Get in Touch</h2>
+        <ContactForm />
+      </div>
     </section>
   );
 }
