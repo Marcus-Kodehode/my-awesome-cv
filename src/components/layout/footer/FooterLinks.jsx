@@ -1,5 +1,6 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope,} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiVercel } from "react-icons/si";
+
 
 export default function FooterLinks() {
   const links = [
@@ -28,7 +29,6 @@ export default function FooterLinks() {
       label: "Vercel",
       icon: <SiVercel />,
     },
-
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function FooterLinks() {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex items-center gap-1 text-sm text-primary hover:text-highlight transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-highlight after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 after:transform"
+          className="relative flex items-center gap-1 text-sm text-black hover:text-yellow-900 transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-yellow-700 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 after:transform"
         >
           {icon}
           {label}

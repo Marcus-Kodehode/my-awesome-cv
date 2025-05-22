@@ -3,19 +3,17 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-export default function StarsBackground() {
+export default function StarsBackground({ transparent = false }) {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
 
   const particlesOptions = {
     fullScreen: false,
-    background: { color: { value: "#0F172A" } },
+    background: { color: { value: transparent ? "transparent" : "#0F172A" } },
     fpsLimit: 60,
     interactivity: {
-      events: {
-        onHover: { enable: true, mode: "repulse" },
-      },
+      events: { onHover: { enable: true, mode: "repulse" } },
     },
     particles: {
       number: { value: 300, density: { enable: true, area: 1000 } },
