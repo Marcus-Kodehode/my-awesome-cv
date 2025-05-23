@@ -9,7 +9,7 @@ export default function ContactForm() {
 
     const form = e.target;
     const data = {
-      access_key: process.env.NEXT_PUBLIC_WEB3FORM_KEY,
+      access_key: process.env.NEXT_PUBLIC_WEB3FORM_KEY || 'fallback-nøkkel-for-lokalt',
       name: form.name.value,
       email: form.email.value,
       message: form.message.value,
