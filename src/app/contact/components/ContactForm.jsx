@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 
 export default function ContactForm() {
@@ -9,13 +10,12 @@ export default function ContactForm() {
 
     const form = e.target;
     const data = {
-      access_key: 'dc0b8705-b66e-41c0-b573-4c4605dee3e3',
       name: form.name.value,
       email: form.email.value,
       message: form.message.value,
     };
 
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
