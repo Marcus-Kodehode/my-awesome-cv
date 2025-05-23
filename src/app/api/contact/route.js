@@ -6,7 +6,7 @@ export async function POST(req) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        access_key: process.env.WEB3FORM_KEY,
+        access_key: process.env.API_ACCESS_KEY,
         name: body.name,
         email: body.email,
         message: body.message,
