@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const [result, setResult] = useState(null);
-  // const [loading, setLoading] = useState(false); // Optional: for loading state
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setLoading(true);
+    setLoading(true);
 
     const form = e.target;
     const data = {
@@ -24,7 +24,7 @@ export default function ContactForm() {
     });
 
     const json = await res.json();
-    // setLoading(false);
+    setLoading(false);
 
     if (json.success) {
       setResult('Your message has been sent successfully!');
@@ -39,7 +39,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-2xl px-6 py-10 mx-auto space-y-6 border shadow-md rounded-2xl bg-space-light/10 border-space-light/20 backdrop-blur-md"
+      className="relative max-w-2xl px-6 py-10 mx-auto space-y-6 transition-all border shadow-md border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:shadow-xl"
     >
       {/* Name */}
       <div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
           type="text"
           required
           placeholder="Your name"
-          className="w-full px-4 py-3 text-sm transition border rounded-md text-star bg-space-light/20 border-space-light placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-space-light/30"
+          className="w-full px-4 py-3 text-sm transition border rounded-md bg-white/10 text-star border-white/10 placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-white/20"
         />
       </div>
 
@@ -67,7 +67,7 @@ export default function ContactForm() {
           type="email"
           required
           placeholder="you@example.com"
-          className="w-full px-4 py-3 text-sm transition border rounded-md text-star bg-space-light/20 border-space-light placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-space-light/30"
+          className="w-full px-4 py-3 text-sm transition border rounded-md bg-white/10 text-star border-white/10 placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-white/20"
         />
       </div>
 
@@ -82,23 +82,33 @@ export default function ContactForm() {
           rows="5"
           required
           placeholder="Your message..."
-          className="w-full px-4 py-3 text-sm transition border rounded-md resize-none text-star bg-space-light/20 border-space-light placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-space-light/30"
+          className="w-full px-4 py-3 text-sm transition border rounded-md resize-none bg-white/10 text-star border-white/10 placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-white/20"
         />
       </div>
 
-      {/* Submit Button */}
+      {/* Submit */}
       <button
         type="submit"
-        className="w-full px-6 py-3 text-sm font-semibold transition rounded-lg text-space bg-highlight hover:bg-accent focus:outline-none focus:ring-2 focus:ring-highlight"
-        // disabled={loading}
+        className="w-full px-6 py-3 text-sm font-semibold transition rounded-lg text-space bg-highlight hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-highlight"
+        disabled={loading}
       >
-        {/* {loading ? "Sending..." : "Send Message"} */}
         Send Message
       </button>
 
-      {/* Result Feedback */}
       {result && (
-        <p className="mt-4 text-sm text-center text-highlight">{result}</p>
+        <p className="mt-4 text-sm text-center text-highlight animate-fadeIn">
+          {result}
+        </p>
+      )}
+
+      {/* Loading Overlay */}
+      {loading && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm rounded-2xl animate-fadeIn">
+          <div className="text-center">
+            <div className="w-10 h-10 mx-auto mb-4 border-4 rounded-full border-t-transparent border-highlight animate-spin" />
+            <p className="text-sm font-semibold text-star">Sending your message...</p>
+          </div>
+        </div>
       )}
     </form>
   );

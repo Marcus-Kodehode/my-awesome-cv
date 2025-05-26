@@ -25,7 +25,7 @@ export default function Testimonials() {
         {sortedTestimonials.map((testimonial, idx) => (
           <article
             key={idx}
-            className="relative flex flex-col justify-between h-full p-6 transition-all duration-300 border shadow-md rounded-xl border-space-light/20 bg-space-light/10 hover:shadow-xl"
+            className="relative flex flex-col justify-between h-full p-6 transition-all duration-300 border shadow-sm rounded-xl border-white/10 bg-white/5 backdrop-blur-md hover:shadow-xl hover:border-highlight"
           >
             <div className="absolute flex items-center justify-center w-10 h-10 rounded-full shadow-lg -top-4 -left-4 bg-highlight text-space">
               <FaQuoteLeft className="text-md" />
