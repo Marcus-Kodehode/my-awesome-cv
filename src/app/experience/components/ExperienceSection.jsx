@@ -24,7 +24,6 @@ export default function ExperienceSection() {
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-star">Work History</h3>
             <ExperienceTimeline />
           </div>
           <div>

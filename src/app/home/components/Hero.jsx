@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HomeStars from './HomeStars';
-import ScrollDownCTA from '@/components/base/ScrollDownCTA';
+import ScrollCTA from '@/components/base/ScrollCTA';
+
 
 export default function Hero() {
   const [userName, setUserName] = useState('');
@@ -19,9 +20,9 @@ export default function Hero() {
     >
       {/* <HomeStars /> */}
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-6xl px-6 mx-auto text-star md:flex-row md:items-center md:justify-between">
+      <div className="relative z-10 flex flex-col-reverse items-center max-w-6xl gap-16 px-6 mx-auto text-star md:flex-row md:items-start md:justify-between md:gap-36">
         {/* Tekstvenstre */}
-        <div className="text-center md:w-1/2 md:text-left">
+        <div className="w-full text-center md:text-left md:w-[60%]">
           <h1 className="mb-6 text-4xl font-bold sm:text-5xl md:text-6xl drop-shadow-glow">
             Welcome{userName ? `, ${userName}` : ''}!
           </h1>
@@ -30,12 +31,11 @@ export default function Hero() {
             I enjoy building responsive, accessible user interfaces with clean structure and a focus on performance.  
             With a background in customer service and team environments, I bring clear communication, problem-solving and a steady mindset to every project.  
             I’m currently expanding my skills with Next.js and Tailwind CSS to stay current and grow as a developer.
-
           </p>
         </div>
 
         {/* Bilde høyre */}
-        <div className="flex justify-center mt-12 md:mt-0 md:w-1/2">
+        <div className="w-full flex justify-center md:justify-end md:w-[40%]">
           <div className="rounded-[25px] p-[3px] bg-gradient-to-br from-highlight to-accent shadow-xl">
             <Image
               src="/images/me.jpg"
@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <ScrollDownCTA />
+      <ScrollCTA />
     </section>
   );
 }

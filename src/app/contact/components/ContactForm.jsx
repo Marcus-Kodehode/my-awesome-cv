@@ -4,9 +4,11 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const [result, setResult] = useState(null);
+  // const [loading, setLoading] = useState(false); // Optional: for loading state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // setLoading(true);
 
     const form = e.target;
     const data = {
@@ -22,6 +24,7 @@ export default function ContactForm() {
     });
 
     const json = await res.json();
+    // setLoading(false);
 
     if (json.success) {
       setResult('Your message has been sent successfully!');
@@ -34,46 +37,68 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-2xl px-6 py-10 mx-auto space-y-6 border shadow-md rounded-2xl bg-space-light/10 border-space-light/20 backdrop-blur-md"
+    >
+      {/* Name */}
       <div>
-        <label className="block mb-1 text-sm text-secondary">Name</label>
+        <label htmlFor="name" className="block mb-1 text-sm font-medium text-star">
+          Name
+        </label>
         <input
+          id="name"
           name="name"
           type="text"
           required
           placeholder="Your name"
-          className="w-full p-3 border rounded-md bg-space-light/10 border-space-light text-star"
+          className="w-full px-4 py-3 text-sm transition border rounded-md text-star bg-space-light/20 border-space-light placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-space-light/30"
         />
       </div>
+
+      {/* Email */}
       <div>
-        <label className="block mb-1 text-sm text-secondary">Email</label>
+        <label htmlFor="email" className="block mb-1 text-sm font-medium text-star">
+          Email
+        </label>
         <input
+          id="email"
           name="email"
           type="email"
           required
           placeholder="you@example.com"
-          className="w-full p-3 border rounded-md bg-space-light/10 border-space-light text-star"
+          className="w-full px-4 py-3 text-sm transition border rounded-md text-star bg-space-light/20 border-space-light placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-space-light/30"
         />
       </div>
+
+      {/* Message */}
       <div>
-        <label className="block mb-1 text-sm text-secondary">Message</label>
+        <label htmlFor="message" className="block mb-1 text-sm font-medium text-star">
+          Message
+        </label>
         <textarea
+          id="message"
           name="message"
           rows="5"
           required
           placeholder="Your message..."
-          className="w-full p-3 border rounded-md bg-space-light/10 border-space-light text-star"
+          className="w-full px-4 py-3 text-sm transition border rounded-md resize-none text-star bg-space-light/20 border-space-light placeholder-secondary focus:outline-none focus:ring-2 focus:ring-highlight focus:bg-space-light/30"
         />
       </div>
+
+      {/* Submit Button */}
       <button
         type="submit"
-        className="px-6 py-3 text-white transition rounded-md bg-highlight hover:bg-accent"
+        className="w-full px-6 py-3 text-sm font-semibold transition rounded-lg text-space bg-highlight hover:bg-accent focus:outline-none focus:ring-2 focus:ring-highlight"
+        // disabled={loading}
       >
+        {/* {loading ? "Sending..." : "Send Message"} */}
         Send Message
       </button>
 
+      {/* Result Feedback */}
       {result && (
-        <p className="mt-2 text-sm text-center text-highlight">{result}</p>
+        <p className="mt-4 text-sm text-center text-highlight">{result}</p>
       )}
     </form>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function SkillCards() {
   const skillCards = [
@@ -33,14 +34,31 @@ export default function SkillCards() {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {skillCards.map((skill, idx) => (
-        <div
+        <motion.div
           key={idx}
-          className="flex flex-col gap-2 p-6 rounded-lg bg-space-light/5
-                     transition-transform hover:scale-[1.015] hover:shadow-lg duration-300"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: idx * 0.1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-3 p-6 transition-all duration-300 ease-in-out border shadow-sm cursor-default  group rounded-xl bg-space-light/20 border-space-light/40 hover:shadow-xl hover:bg-space-light/30 hover:border-accent/50"
+          // 🌟 Uncomment for subtle 3D tilt
+          // onMouseMove={(e) => {
+          //   const rect = e.currentTarget.getBoundingClientRect();
+          //   const x = e.clientX - rect.left;
+          //   const y = e.clientY - rect.top;
+          //   e.currentTarget.style.transform = `rotateY(${(x - rect.width / 2) / 20}deg) rotateX(${(rect.height / 2 - y) / 20}deg)`;
+          // }}
+          // onMouseLeave={(e) => {
+          //   e.currentTarget.style.transform = "rotateY(0deg) rotateX(0deg)";
+          // }}
         >
-          <h3 className="font-semibold text-star">{skill.title}</h3>
-          <p className="text-secondary">{skill.desc}</p>
-        </div>
+          <h3 className="text-lg font-semibold transition-colors duration-300 text-star group-hover:text-accent">
+            {skill.title}
+          </h3>
+          <p className="text-sm leading-relaxed text-secondary">
+            {skill.desc}
+          </p>
+        </motion.div>
       ))}
     </div>
   );

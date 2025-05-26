@@ -10,7 +10,6 @@ export default function BackgroundStars() {
 
   const particlesOptions = {
     fullScreen: false,
-    // background: { color: { value: "#0F172A" } },
     fpsLimit: 60,
     interactivity: {
       events: {
@@ -34,20 +33,14 @@ export default function BackgroundStars() {
   };
 
   return (
-    <Particles
-      id="homeStars"
-      init={particlesInit}
-      options={particlesOptions}
-      className="fixed inset-0"
-      style={{ width: '100%', height: '150%' }}
-    />
+    <>
+      <Particles
+        id="homeStars"
+        init={particlesInit}
+        options={particlesOptions}
+        className="fixed inset-0"
+        style={{ width: '100%', height: '150%' }}
+      />
+    </>
   );
-}
-
-export const BackgroundGradient = () => {
-  const pageHeight = window.scrollY
-  console.log(pageHeight)
-  return (
-<></>
-  )
 }

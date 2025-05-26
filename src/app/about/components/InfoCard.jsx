@@ -1,13 +1,12 @@
-// src/app/about/components/InfoCard.jsx
 "use client";
 
 export default function InfoCard({ imageSrc, title, description }) {
   return (
     <div className="
-      h-full flex flex-col max-w-xs w-full
-      bg-space-light/5    /* Diskret bakgrunn */
-      rounded-lg          /* Myke hjørner */
-      overflow-hidden     /* Klipp alt som stikker utenfor */
+      flex flex-col w-full h-full 
+      max-w-[22rem] mx-auto 
+      overflow-hidden rounded-lg 
+      bg-space-light/5
     ">
       {/* Bilde */}
       <div className="w-full h-40 overflow-hidden">
@@ -19,11 +18,10 @@ export default function InfoCard({ imageSrc, title, description }) {
       </div>
 
       {/* Tekst */}
-      <div className="flex flex-col flex-1 p-4">
+      <div className="flex flex-col flex-1 p-6">
         <h3 className="mb-2 text-lg font-semibold text-star">{title}</h3>
         <p className="flex-1 text-secondary">{description}</p>
       </div>
     </div>
   );
 }
-

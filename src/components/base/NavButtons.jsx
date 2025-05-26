@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function NavButtons({ href, children }) {
+export default function NavButtons({ href, children, onClick }) {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -23,6 +23,7 @@ export default function NavButtons({ href, children }) {
   return (
     <a
       href={href}
+      onClick={onClick} // ✅ Legg til denne linjen
       className={`relative px-1 transition-colors duration-200 
         ${isActive ? "text-highlight font-semibold" : "text-secondary"} 
         hover:text-highlight
@@ -33,7 +34,5 @@ export default function NavButtons({ href, children }) {
     >
       {children}
     </a>
-
-
   );
 }

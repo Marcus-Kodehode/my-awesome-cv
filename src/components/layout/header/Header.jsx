@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-// import StarsBackground from "./StarsBackground";
 import Logo from "./Logo";
 import LogoAndTitle from "./LogoAndTitle";
 import NavBar from "./NavBar";
-import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const pathname = usePathname();
@@ -15,40 +13,19 @@ export default function Header() {
 
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [lastY, setLastY] = useState(0);
 
   useEffect(() => {
-    let timeoutId;
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
       const currentY = window.scrollY;
-      const delta = currentY - lastScrollY;
-
-      // Manuell scroll ned = skjul etter liten delay
-      const isScrollingDown = delta > 5 && currentY > 100;
-
-      if (isScrollingDown) {
-        timeoutId = setTimeout(() => {
-          setHidden(true);
-        }, 150);
-      }
-
-      // Scroll opp = vis umiddelbart
-      if (delta < -5) {
-        setHidden(false);
-      }
-
-      lastScrollY = currentY;
-      setScrolled(currentY > 100);
+      setHidden(currentY > lastY && currentY > 100);
+      setScrolled(currentY > 10);
+      setLastY(currentY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastY]);
 
   return (
     <header
@@ -60,23 +37,22 @@ export default function Header() {
       `}
     >
       <div className={`
-        relative h-full max-w-6xl mx-auto overflow-hidden transition-colors duration-300
-        ${scrolled ? "bg-transparent" : "bg-star-gradient shadow-md rounded-b-2xl"}
+        relative h-full max-w-6xl mx-auto overflow-hidden pointer-events-auto
+        transition-colors duration-300 rounded-b-2xl
+        ${scrolled
+          ? "bg-space/60 backdrop-blur-sm"
+          : "bg-star-gradient backdrop-blur-md shadow-md"}
       `}>
-        {/* <StarsBackground transparent={scrolled} /> */}
-
         <div className="relative z-10 flex flex-col h-full gap-4 px-6 pt-4 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
-            <Link href="/home#hero" aria-label="Gå til toppen">
+            <Link href="/home#hero" aria-label="Back to top">
               <Logo />
             </Link>
             <LogoAndTitle />
           </div>
+
           <div className="hidden md:flex">
             <NavBar />
-          </div>
-          <div className="self-end pr-4 -mt-2 md:hidden">
-            <MobileMenu />
           </div>
         </div>
       </div>

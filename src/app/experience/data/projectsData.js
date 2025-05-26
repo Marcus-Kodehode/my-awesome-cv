@@ -5,6 +5,7 @@ export const PROJECTS = [
     tech: ["React", "Vite", "CSS Modules", "Vercel"],
     linkLive: "https://mystara-paths-of-profit.vercel.app/",
     linkCode: "https://github.com/Marcus-Kodehode/Mystara--Paths-of-Profit",
+    status: "In Progress",
   },
   {
     title: "Website for a diving club",
@@ -12,6 +13,7 @@ export const PROJECTS = [
     tech: ["React", "Vite", "CSS Modules", "Vercel"],
     linkLive: "https://drammendykker-klubb.vercel.app/",
     linkCode: "https://github.com/Marcus-Kodehode/drammendykker-klubb",
+    status: "In Progress",
   },
   {
     title: "Fictional product website",
@@ -19,6 +21,7 @@ export const PROJECTS = [
     tech: ["React", "Vite", "CSS Modules", "Vercel"],
     linkLive: "https://feriefun.vercel.app/",
     linkCode: "https://github.com/Marcus-Kodehode/Feriefun",
+    status: "Finished",
   },
   {
     title: "TaskForce-9000",
@@ -26,5 +29,6 @@ export const PROJECTS = [
     tech: ["React", "Vite", "CSS Modules", "Vercel"],
     linkLive: "https://task-force-9000.vercel.app/",
     linkCode: "https://github.com/Marcus-Kodehode/TaskForce-9000",
+    status: "Finished (Open for upgrades in the future)",
   },
 ];
