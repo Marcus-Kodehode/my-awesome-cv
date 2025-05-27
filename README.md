@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 👨‍💻 Min CV-nettside
 
-First, run the development server:
+Velkommen til min personlige CV-side, laget med **Next.js** og **Tailwind CSS**. Dette prosjektet presenterer min bakgrunn, ferdigheter og prosjekter på en enkel, moderne og responsiv måte.
+
+---
+
+## 🚀 Kom i gang
+
+### 1. Klon prosjektet
+
+```bash
+git clone https://github.com/dittbrukernavn/my-cv-site.git
+cd my-cv-site
+```
+
+### 2. Installer avhengigheter
+
+```bash
+npm install
+```
+
+### 3. Start utviklingsserveren
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Åpne [http://localhost:3000](http://localhost:3000) i nettleseren din.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧰 Teknologier brukt
 
-## Learn More
+- **Next.js** – React-rammeverk med server-side rendering
+- **Tailwind CSS** – Utility-first CSS for rask stilsetting
+- **React** – Bygger grensesnittet
+- **JavaScript / JSX**
+- **PostCSS** – For prosessering av CSS
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🗂️ Prosjektstruktur
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+my-cv-site/
+├── app/              # Sider og routing
+├── components/       # UI-komponenter
+├── public/           # Bilder og statiske filer
+├── styles/           # Globale stilark
+├── .env.local        # Miljøvariabler (ikke last opp!)
+├── package.json      # Avhengigheter og scripts
+└── tailwind.config.js # Tailwind-konfig
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Hva inneholder siden?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 👤 Om meg-seksjon
+- 💼 Erfaring og utdanning
+- 🛠️ Ferdigheter og teknologi-stack
+- 📂 Prosjekter med lenker
+- 📞 Kontaktinformasjon
+
+---
+
+## 🧪 Videre utvikling
+
+- Legge til mørk modus
+- PDF-nedlasting av CV
+- Animasjoner og interaktivitet
+
+---
+
+## ✍️ Signatur
+
+```
+//  One bug to find them,
+//  One fix to bring them all,
+//  And in the darkness bind them.
+```
+
+---
+
+## 📬 Kontakt
+
+Send meg en melding hvis du ønsker å samarbeide eller gi tilbakemelding!
