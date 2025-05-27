@@ -9,7 +9,7 @@ export const PROJECTS = [
   },
   {
     title: "Website for a diving club",
-    imgSrc: "/images/screenshoots/drammen-dykker.png",
+    imgSrc: "/images/screenshoots/drammen-d.png",
     tech: ["React", "Vite", "CSS Modules", "Vercel"],
     linkLive: "https://drammendykker-klubb.vercel.app/",
     linkCode: "https://github.com/Marcus-Kodehode/drammendykker-klubb",
