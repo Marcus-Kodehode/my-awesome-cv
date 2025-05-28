@@ -37,4 +37,11 @@ He has a strong rapport with coworkers and guests alike.`,
     period: "Aug 2022 – Nov 2022",
     text: "He always starts the day with a good mood and a positive attitude, and he has a unique ability to create a sense of trust and safety around him. Marcus combines professional skill with a genuine interest in the people he works with, and it shows in everything he does. He is solution-oriented, engaged, and someone you can always rely on. Our work environment is definitely better with Marcus in it!",
   },
+        {
+    name: "Remi Raja",
+    title: "General Manager",
+    company: "Unique Cafe, Drammen",
+    period: "Sep 2016 – Aug 2017",
+    text: "Marcus worked with us at Unique Café, where he took responsibility in the bar and delivered great service during busy periods. He proved to be reliable, hardworking, and a good colleague. He handled both bartending, end-of-day settlements, and guiding other staff. I’m happy to recommend him further.",
+  },
 ];
