@@ -7,7 +7,7 @@ export default function SkillCards() {
   const skillCards = [
     {
       title: "Frontend Development",
-      desc: "Ambitious frontend developer skilled in HTML, CSS, JavaScript, React and Vite. Quick to adopt Next.js and Tailwind, and experienced with Git, VS Code and Vercel deployments.",
+      desc: "Ambitious frontend developer skilled in HTML, CSS, JavaScript, React and Vite. Quick to adopt Next.js and Tailwind, and used with Git, VS Code and Vercel deployments. Currently training in Vue",
     },
     {
       title: "Customer Service & Communication",
@@ -40,7 +40,7 @@ export default function SkillCards() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: idx * 0.1 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="flex flex-col gap-3 p-6 transition-all duration-300 ease-in-out border shadow-sm cursor-default  group rounded-xl bg-space-light/20 border-space-light/40 hover:shadow-xl hover:bg-space-light/30 hover:border-accent/50"
+          className="flex flex-col gap-3 p-6 transition-all duration-300 ease-in-out border shadow-sm cursor-default group rounded-xl bg-space-light/20 border-space-light/40 hover:shadow-xl hover:bg-space-light/30 hover:border-accent/50"
           // 🌟 Uncomment for subtle 3D tilt
           // onMouseMove={(e) => {
           //   const rect = e.currentTarget.getBoundingClientRect();
