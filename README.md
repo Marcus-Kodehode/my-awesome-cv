@@ -69,7 +69,7 @@ my-cv-site/
 ## 📸 Eksempel på nettsiden
 
 <p align="center">
-  <img src="public/images/screenshot.png" alt="CV-skjermbilde" width="400"/>
+  <img src="public/images/my-cv-site-skjermbilde.png" alt="CV-skjermbilde" width="400"/>
 </p>
 
 ---
