@@ -1,7 +1,18 @@
+<p align="center">
+  <img src="public/images/logo.png" alt="CV Logo" width="200"/>
+</p>
 
-# 👨‍💻 Min CV-nettside
+# 👨‍💻 Min CV-nettside – Presentasjon med stil og struktur
 
-Velkommen til min personlige CV-side, laget med **Next.js** og **Tailwind CSS**. Dette prosjektet presenterer min bakgrunn, ferdigheter og prosjekter på en enkel, moderne og responsiv måte.
+Velkommen til min personlige CV-side laget med **Next.js** og **Tailwind CSS**.  
+Nettsiden presenterer min bakgrunn, ferdigheter og prosjekter på en enkel, moderne og responsiv måte.
+
+---
+
+## 🧭 Hva er dette prosjektet?
+
+Prosjektet ble laget som en digital versjon av min CV og et frontend-eksperiment med Next.js.  
+Målet er å presentere meg selv på en profesjonell og teknisk måte – med fokus på design, struktur og lesbarhet.
 
 ---
 
@@ -30,13 +41,13 @@ npm run dev
 
 ---
 
-## 🧰 Teknologier brukt
+## 🛠️ Teknologier brukt
 
-- **Next.js** – React-rammeverk med server-side rendering
-- **Tailwind CSS** – Utility-first CSS for rask stilsetting
-- **React** – Bygger grensesnittet
+- **Next.js** – React-rammeverk med SSR
+- **Tailwind CSS** – Utility-first stilark
+- **React** – UI-komponenter
 - **JavaScript / JSX**
-- **PostCSS** – For prosessering av CSS
+- **PostCSS** – CSS-prosessering
 
 ---
 
@@ -48,10 +59,18 @@ my-cv-site/
 ├── components/       # UI-komponenter
 ├── public/           # Bilder og statiske filer
 ├── styles/           # Globale stilark
-├── .env.local        # Miljøvariabler (ikke last opp!)
-├── package.json      # Avhengigheter og scripts
-└── tailwind.config.js # Tailwind-konfig
+├── .env.local        # Miljøvariabler (privat)
+├── package.json      # Scripts og avhengigheter
+└── tailwind.config.js # Tailwind-konfigurasjon
 ```
+
+---
+
+## 📸 Eksempel på nettsiden
+
+<p align="center">
+  <img src="public/images/screenshot.png" alt="CV-skjermbilde" width="400"/>
+</p>
 
 ---
 
@@ -65,9 +84,10 @@ my-cv-site/
 
 ---
 
-## 🧪 Videre utvikling
+## 🔧 Videre utvikling
 
-- Legge til mørk modus
+Planer for fremtiden:
+- Mørk modus
 - PDF-nedlasting av CV
 - Animasjoner og interaktivitet
 
@@ -85,4 +105,6 @@ my-cv-site/
 
 ## 📬 Kontakt
 
-Send meg en melding hvis du ønsker å samarbeide eller gi tilbakemelding!
+Send meg gjerne en melding hvis du ønsker å samarbeide eller gi tilbakemelding!
+
+---
