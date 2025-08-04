@@ -27,10 +27,10 @@ export default function Hero() {
             Welcome{userName ? `, ${userName}` : ''}!
           </h1>
           <p className="text-lg leading-relaxed md:text-xl text-secondary drop-shadow">
-            Hi, I’m Marcus — a detail-oriented frontend developer with a strong foundation in React, HTML, CSS, JavaScript and Vite.  
-            I enjoy building responsive, accessible user interfaces with clean structure and a focus on performance.  
-            With a background in customer service and team environments, I bring clear communication, problem-solving and a steady mindset to every project.  
-            I’m currently expanding my skills with Next.js and Tailwind CSS to stay current and grow as a developer.
+            Hi, I’m Marcus — a motivated and detail-focused frontend developer with a background in customer service and a passion for building practical, human-centered web solutions.  
+            I’m currently learning TypeScript while expanding my experience with Next.js, Tailwind CSS, and UI-focused architecture.  
+            I bring structure, curiosity, and a calm, reliable mindset to every project — with a strong belief in steady growth and clear communication.  
+            Still early in my developer journey, but learning fast — and always aiming to build things that make sense and feel good to use.
           </p>
         </div>
 
