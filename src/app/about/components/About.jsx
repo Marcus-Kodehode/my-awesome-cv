@@ -23,10 +23,10 @@ export default function About() {
           <div className="space-y-6">
             <h2 className="text-4xl font-bold">About Me</h2>
             <p className="text-lg leading-relaxed">
-              I’m a junior frontend developer with a solid foundation in HTML, CSS and JavaScript, and hands-on experience building small React and Next.js projects. I focus on crafting clean, accessible interfaces and optimizing performance to deliver smooth, responsive user experiences.
+              I’m a junior frontend developer currently studying through Kodehode. Since January, I’ve been building projects using HTML, CSS, JavaScript, React and most recently Next.js and Tailwind CSS. I enjoy translating ideas into responsive, user-friendly interfaces that are structured, fast and accessible.
             </p>
             <p className="text-lg leading-relaxed">
-              Through coursework and personal side-projects, I have created interactive UIs and mastered best practices for maintainable code, basic testing and user-centric design—always eager to learn more and level up my skills.
+              My background is in customer service and relations work — where clear communication, structure and solving problems under pressure were part of the daily routine. That mindset still guides how I work: steady, practical, and focused on delivering value to real users.
             </p>
           </div>
 
