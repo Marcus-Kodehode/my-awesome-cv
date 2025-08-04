@@ -37,7 +37,7 @@ export default function About() {
               I’m naturally structured, curious and calm under pressure — someone who enjoys working with clear goals and reliable routines, but also thrives when learning something new. I like building things that work, make sense, and feel good to use.
             </p>
             <p className="text-lg leading-relaxed">
-              I’m still early in my developer journey, but I’m motivated and consistent. I bring a thoughtful, analytical approach to everything I do — and I value collaboration, honest feedback and steady progress over shortcuts and ego.
+              I’m early in my developer journey, but I’m motivated and consistent. I bring a thoughtful, analytical approach to everything I do — and I value collaboration, honest feedback and steady progress over shortcuts and ego.
             </p>
           </div>
         </div>
