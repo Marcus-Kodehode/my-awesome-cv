@@ -15,7 +15,7 @@ export default function SkillCards() {
     },
     {
       title: "Problem Solving & Analysis",
-      desc: "Naturally structured and reflective. I break problems into clear steps, test early, and work steadily toward practical, stable solutions.",
+      desc: "Analytical by nature and grounded in structure. I approach challenges by breaking them into manageable steps, validating early, and working consistently toward practical, dependable solutions.",
     },
     {
       title: "Teamwork & Leadership",
