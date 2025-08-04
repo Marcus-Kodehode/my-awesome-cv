@@ -4,54 +4,54 @@ export const CARDS_DATA = [
     imageSrc: "/images/cards/infocard1.webp",
     title: "Frontend Builder",
     description:
-      "Experienced with HTML, CSS, JavaScript and React. Strong in structure, semantics and modern design methods.",
+      "Comfortable with HTML, CSS, JavaScript and React. I enjoy turning layouts into clean, structured, and accessible code.",
   },
   {
     imageSrc: "/images/cards/infocard2.webp",
     title: "Rising Developer",
     description:
-      "Actively practicing Next.js and Tailwind to master scalable frontend solutions. Learning TypeScript for professional codebases.",
+      "Learning Next.js, Vue, Tailwind and TypeScript — focused on scalable UI, clean components and performance-minded builds.",
   },
   {
     imageSrc: "/images/cards/infocard3.webp",
     title: "Tech Enthusiast",
     description:
-      "Passionate about building responsive, high-performance, and user-friendly applications. Ready for hands-on practice and growth!",
+      "I love practical, fast and responsive apps — and I'm excited to keep building things that actually work and help people.",
   },
   {
     imageSrc: "/images/cards/infocard4.webp",
     title: "Team Player",
     description:
-      "Enjoy collaborating and sharing knowledge. Thrive in helping others succeed, and contribute to a positive work environment.",
+      "I’m supportive, dependable, and like creating a calm, helpful vibe in the team — especially when things get stressful.",
   },
   {
     imageSrc: "/images/cards/infocard5.webp",
     title: "Lifelong Learner",
     description:
-      "Driven by continuous learning; stay up-to-date with modern technologies, tools, and best practices in frontend development.",
+      "I’m curious by nature. Always improving — whether it’s code quality, new tools, or better project habits.",
   },
   {
     imageSrc: "/images/cards/infocard6.webp",
     title: "Problem Solver",
     description:
-      "Skilled at analyzing challenges and crafting practical, user-centric solutions in both development and design.",
+      "I like structure and logic. Breaking things down and fixing them is half the fun — especially when it helps someone.",
   },
     {
     imageSrc: "/images/cards/infocard7.webp",
     title: "Leadership & Sales",
     description:
-      "Enjoy leading, motivating others and selling ideas or products. Skilled in leadership and sales with a drive for success and recognition."
+      "I know how to guide people, earn trust, and sell with honesty. Comes from real experience — not just theory."
   },
   {
     imageSrc: "/images/cards/infocard8.webp",
     title: "Teamwork & Support",
     description:
-      "Strong at giving advice, helping and supporting others in service or care-related roles. Thrive in collaborative, harmonious environments."
+      "Helping others succeed has always come naturally. I bring care, loyalty and a steady presence to any group."
   },
   {
     imageSrc: "/images/cards/infocard9.webp",
     title: "Organizational Skills",
     description:
-      "Excellent at working with data, structure and office tools. Dependable, detail‐oriented, and efficient at creating order and control."
+      "Order and flow matter to me. I like keeping things tidy — in code, in tasks, and in shared tools and systems."
   },
 ];
