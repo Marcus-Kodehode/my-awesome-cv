@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import NavButtons from '@/components/base/NavButtons';
+import useScrollHide from "@/hooks/useScrollHide";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const { hidden } = useScrollHide(); // 💡 Bruk hook
 
   // ESC-key handling + scroll lock
   useEffect(() => {
@@ -27,7 +29,13 @@ export default function MobileMenu() {
   return (
     <>
       {/* Hamburger / X toggle icon */}
-      <div className="fixed z-[999] right-4 top-5 md:hidden">
+      <div
+        className={`
+          fixed z-[999] right-4 top-5 md:hidden transition-all duration-300
+          ${hidden ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100 pointer-events-auto"}
+        `}
+      >
+
         <button
           className="text-3xl text-accent"
           onClick={() => setOpen(prev => !prev)}

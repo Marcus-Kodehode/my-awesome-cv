@@ -1,31 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import LogoAndTitle from "./LogoAndTitle";
 import NavBar from "./NavBar";
+import useScrollHide from "@/hooks/useScrollHide"; // 💡 Hook
 
 export default function Header() {
   const pathname = usePathname();
   const isStartScreen = pathname === "/startscreen";
-
-  const [hidden, setHidden] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [lastY, setLastY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-      setHidden(currentY > lastY && currentY > 100);
-      setScrolled(currentY > 10);
-      setLastY(currentY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastY]);
+  const { hidden, scrolled } = useScrollHide(); // 💡 Bruk hook
 
   return (
     <header
