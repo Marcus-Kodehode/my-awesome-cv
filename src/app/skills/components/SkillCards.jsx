@@ -7,27 +7,27 @@ export default function SkillCards() {
   const skillCards = [
     {
       title: "Frontend Development",
-      desc: "Ambitious frontend developer skilled in HTML, CSS, JavaScript, React and Vite. Quick to adopt Next.js and Tailwind, and used with Git, VS Code and Vercel deployments. Currently training in Vue",
+      desc: "Focused on building structured, user-friendly interfaces with HTML, CSS, JavaScript and React. Actively exploring Next.js, Vue, Tailwind and TypeScript to level up both frontend logic and visual polish.",
     },
     {
       title: "Customer Service & Communication",
-      desc: "Reliable service professional with 10+ years in retail. Strong in customer dialogue, problem-solving at the point of sale, and building trustful relationships both in writing and in person.",
+      desc: "Over 10 years of experience meeting people with calm, clarity and care. I bring that same mindset into tech — honest, user-focused, and easy to work with.",
     },
     {
       title: "Problem Solving & Analysis",
-      desc: "Highly structured and conscientious—breaks complex issues into clear steps, iterates solutions rapidly, and ensures accuracy under tight deadlines.",
+      desc: "Naturally structured and reflective. I break problems into clear steps, test early, and work steadily toward practical, stable solutions.",
     },
     {
       title: "Teamwork & Leadership",
-      desc: "Collaborative team player who enjoys sharing knowledge and mentoring peers. Proactive in creating a supportive, learning-focused environment.",
+      desc: "I’m dependable and loyal in team settings. I support others, keep calm under pressure, and help build a positive atmosphere — even when deadlines get close.",
     },
     {
       title: "Adaptability & Learning",
-      desc: "Fast learner with high openness to new ideas and tools. Continuously updates skills in web tech, best practices and safety procedures.",
+      desc: "Curious by nature and always building. I pick up new tools quickly and enjoy improving both how I code and how I collaborate.",
     },
     {
       title: "Detail-Oriented & Dependable",
-      desc: "Consistently delivers well-tested, robust work thanks to disciplined planning and emotional stability—even under pressure.",
+      desc: "I care about doing things right. From file structure to bug tracking, I value clean systems, clear logic, and delivering work people can rely on.",
     },
   ];
 
