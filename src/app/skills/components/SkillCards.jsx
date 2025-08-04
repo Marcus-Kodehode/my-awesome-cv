@@ -19,7 +19,7 @@ export default function SkillCards() {
     },
     {
       title: "Teamwork & Leadership",
-      desc: "I’m dependable and loyal in team settings. I support others, keep calm under pressure, and help build a positive atmosphere — even when deadlines get close.",
+      desc: "I’m dependable and loyal in team settings. I support others, keep calm under pressure, and help build a positive atmosphere — even when deadlines gets close.",
     },
     {
       title: "Adaptability & Learning",
