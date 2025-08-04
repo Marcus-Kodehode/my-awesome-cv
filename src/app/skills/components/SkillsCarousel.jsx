@@ -14,6 +14,9 @@ export default function SkillsCarousel() {
     "vercel",
     "cssmodules",
     "github",
+    "figma",
+    "typescript",
+    "vue",
   ];
 
   return (
