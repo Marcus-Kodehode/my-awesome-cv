@@ -34,10 +34,10 @@ export default function About() {
           <div className="space-y-6">
             <h2 className="text-4xl font-bold">Personal Profile</h2>
             <p className="text-lg leading-relaxed">
-              Highly organized and methodical: I break down complex challenges into clear, step-by-step processes, ensuring timely delivery and optimal resource use. My background in customer service has sharpened my attention to detail and my ability to adapt on the fly.
+              I’m naturally structured, curious and calm under pressure — someone who enjoys working with clear goals and reliable routines, but also thrives when learning something new. I like building things that work, make sense, and feel good to use.
             </p>
             <p className="text-lg leading-relaxed">
-              Proactive learner & team player: I thrive on sharing knowledge, mentoring peers and collaborating across functions. Curiosity and creativity drive me to experiment with new tools and set ambitious personal goals.
+              I’m still early in my developer journey, but I’m motivated and consistent. I bring a thoughtful, analytical approach to everything I do — and I value collaboration, honest feedback and steady progress over shortcuts and ego.
             </p>
           </div>
         </div>
