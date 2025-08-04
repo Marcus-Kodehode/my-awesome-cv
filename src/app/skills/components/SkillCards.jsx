@@ -15,7 +15,7 @@ export default function SkillCards() {
     },
     {
       title: "Problem Solving & Analysis",
-      desc: "Analytical by nature and grounded in structure. I approach challenges by breaking them into manageable steps, validating early, and working consistently toward practical, dependable solutions.",
+      desc: "Analytical by nature and grounded in structure. I approach challenges by breaking them down into manageable steps, validating early, and working consistently toward practical, dependable solutions.",
     },
     {
       title: "Teamwork & Leadership",
