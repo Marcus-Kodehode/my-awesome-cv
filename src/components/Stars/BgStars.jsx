@@ -34,13 +34,13 @@ export default function BackgroundStars() {
 
   return (
     <>
-      <Particles
-        id="homeStars"
-        init={particlesInit}
-        options={particlesOptions}
-        className="fixed inset-0"
-        style={{ width: '100%', height: '150%' }}
-      />
+    <Particles
+      id="homeStars"
+      init={particlesInit}
+      options={particlesOptions}
+      className="fixed inset-0 pointer-events-none"
+      style={{ width: '100%', height: '150%' }}
+    />
     </>
   );
 }

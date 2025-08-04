@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative px-4 py-20 overflow-hidden lg:py-32"
+      className="relative px-4 py-20 overflow-hidden min-h-[75vh] lg:py-32"
     >
       {/* Stjerner bak */}
       <div className="absolute inset-0 pointer-events-none opacity-60">

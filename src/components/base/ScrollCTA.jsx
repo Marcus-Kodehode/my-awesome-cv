@@ -24,7 +24,7 @@ export default function ScrollCTA({
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.3 }
     );
 
     sections.forEach((id) => {
