@@ -7,17 +7,16 @@ export default function SkillsIntro() {
       <div>
         <h2 className="text-4xl font-bold text-star">My Skills</h2>
         <p className="max-w-2xl mt-4 text-secondary">
-          I deliver production-ready, high-performance web applications with a focus
-          on accessibility, clean code and user-centric design.
+          I build thoughtful, reliable frontend solutions with a focus on structure, accessibility and user experience.  
+          My code is clean, responsive and grounded in real-world usage — not just theory.
         </p>
       </div>
 
       {/* Secondary description */}
       <div className="max-w-3xl">
         <p className="text-secondary">
-          My approach blends analytical rigor and creativity. I thrive in collaborative
-          environments, learn new tools rapidly, and maintain structure and clarity
-          throughout every project.
+          I bring a steady and organized mindset to every project. I thrive in clear systems, value collaboration, and always look to improve — both in how I work and what I deliver.  
+          Still early in my developer journey, but learning fast and building with purpose.
         </p>
       </div>
     </>
